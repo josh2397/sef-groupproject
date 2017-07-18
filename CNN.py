@@ -26,9 +26,9 @@ class convolutionalNeuralNetwork:
 
         self.numberOfLayers = len(shape)
 
-        self.weights = [np.random.normal(0, 1/np.sqrt(shape[i+1], (shape[i], shape[i+1])) for i in range(self.numberOfLayers - 1)))]
+        self.weights = [np.random.normal(0, 1 / np.sqrt(shape[i + 1]), (shape[i], shape[i + 1])) for i in range(self.numberOfLayers - 1)]
 
         self.bias = [np.random.normal(0, 1, (shape[i])) for i in range(1, self.numberOfLayers)]
 
 
-network = convolutionalNeuralNetwork( [784, 30, 10] )
+network = convolutionalNeuralNetwork( [4096, 300, 250, 200, 150, 100, 50, 10] )
